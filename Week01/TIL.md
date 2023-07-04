@@ -1,8 +1,8 @@
 # 1주차
 ## 공통 문제
-> 백준 11729
-<br>
-> 프로그래머스 60058
+> [백준 11729 하노이 탑 이동 순서](https://www.acmicpc.net/problem/11729)<br>
+[프로그래머스 60058 괄호 변환](https://school.programmers.co.kr/learn/courses/30/lessons/60058?language=python3)
+
 
 ## 느낀점
 - 열심히 노느라 늦게 풀기도 했지만 시간의 촉박함 + 문제가 너무 너무 어려움... 으로 인해서 정말 힘들게 문제를 풀었다...
