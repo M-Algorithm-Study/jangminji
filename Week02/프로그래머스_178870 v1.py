@@ -1,5 +1,6 @@
 import sys
 sys.stdin = open("input.txt", "r")
+
 def solution(sequence, k):
     answer = sequence
     for i in range(len(sequence)):
@@ -29,3 +30,4 @@ def solution(sequence, k):
 print(solution([1, 1, 1, 2, 3, 4, 5], 5))
 
 # 문제가 같을 경우에는 인덱스 번호가 앞인 애를 가져와야하는데....
+# 시간초과....와 틀린 부분도 있음
