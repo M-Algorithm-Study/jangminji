@@ -13,7 +13,7 @@ def bfs():
                 if arr[h][i][j] == 1: # 익은 토마토
                     q.append((h,i,j))
                     visited[h][i][j] = 1
-                elif arr[h][i][j] == 0:
+                elif arr[h][i][j] == 0: # 안 익은 토마토
                     seignant += 1
     while q:
         qh, qi, qj = q.popleft()
@@ -23,7 +23,7 @@ def bfs():
             if 0 <= nh < H and 0 <= ni < N and 0 <= nj < M and arr[nh][ni][nj] == 0 and visited[nh][ni][nj] == 0:
                 q.append((nh,ni,nj))
                 visited[nh][ni][nj] = visited[qh][qi][qj] + 1
-                seignant -= 1
+                seignant -= 1 # 다 익었는지 확인하는 코드
 
     if seignant == 0:
         return visited[qh][qi][qj] - 1
