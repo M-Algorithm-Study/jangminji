@@ -6,7 +6,7 @@ cnt_list = set()
 cnt = 0
 
 for _ in range(N):
-    word = input().rstrip()  # 개행 문자 제거
+    word = input().rstrip()
     if word == 'ENTER':
         cnt_list.clear()
     else:
