@@ -20,10 +20,10 @@ def backTracking(result):
             
             return
     for i in range(len(alpas)):
-        if (len(result)==0 or alpas[i] > result[-1]):
-            # visited[i] = True
+        if visited[i] == False and (len(result)==0 or alpas[i] > result[-1]):
+            visited[i] = True
             result.append(alpas[i])
             backTracking(result)
-            # visited[i] = False
+            visited[i] = False
             result.pop()
 backTracking([])

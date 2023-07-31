@@ -3,7 +3,7 @@ sys.stdin  = open('input.txt', 'r')
 N, M = map(int, input().split())
 num_list = list(map(int, input().split()))
 num_list.sort() # 1 7 9 9
-num_list = dict(num_list)
+num_list
 visited = [False] * (N+1)
 
 def backTracking(result):
