@@ -10,7 +10,7 @@ def backTracking(result):
     
     # 방문 전 and 빈 리스트이거나 or
     # 방문 전 and 담아놓은 결과가 담을 것보다 작으면 담기
-    for i in range(1, N+1):
+    for i in range(1, N+1): # 1 / 1
         if (visited[i]== False) and (len(result)==0 or i > result[-1]):
             visited[i] = True
             result.append(i)
