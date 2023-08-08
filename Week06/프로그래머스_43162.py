@@ -1,11 +1,11 @@
 def solution(n, computers):
-    visited = [[False] * n for _ in range(n)]
+    visited = [False] * n
     answer = 0
     for i in range(n): # 0 1 2
         if visited[i] == False:
             stack = [i]
             visited[i] = True
-            while stack: # 연결된 컴퓨터는 이 while문에서 모두 true로 바뀜
+            while stack: # 연결된 컴퓨터는 이 while문에서 모두 true
                 cur = stack.pop()
                 for j in range(n):# 0 1 2
                     if cur == j:
