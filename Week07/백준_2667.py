@@ -40,7 +40,6 @@ for i in range(N):
             cnt += 1
 
 print(len(result_dict))
-# result = sorted(result.items(), key=lambda x: (-x[1],-len(x[0]),x[0]))
 result = sorted(result_dict.values())
 for r in result:
     print(r)

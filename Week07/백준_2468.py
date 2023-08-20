@@ -20,8 +20,6 @@ for height in range(0, max_height):
         for j in range(N):
             if graph[i][j] > height:
                 safety[i][j] = True
-            
-    # print(safety)
     cnt = 0
     # safty 리스트 돌기
     for x in range(N):
