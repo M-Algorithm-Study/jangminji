@@ -12,7 +12,6 @@ while stack:
     cur = stack.popleft()
     cnt += 1
     if cur == K:
-        # print(stack)
         print(visited[cur], cnt)
         break
     
