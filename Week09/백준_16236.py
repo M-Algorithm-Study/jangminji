@@ -23,7 +23,7 @@ total_days = 0
 eat = 0
 while True:
     q = deque()
-    # 상어 처음 위치 or 물고기를 잡아 먹을때만 움직임
+    # 상어 처음 위치 or 물고기를 잡아 먹을때
     q.append((shark_x, shark_y, 0))
     visited = [[False] * N for _ in range(N)]
     flag = 1e9
@@ -31,8 +31,7 @@ while True:
 
     while q:
         x, y, count = q.popleft()
-
-        # 먹을 수 있는 물고기가 너무 멀리 있으면 종료
+        # 먹을 수 있는 물고기보다 돌고 있는 현재 위치가 더 멀 경우 반복문 종료
         if count > flag:
             break
 
@@ -57,6 +56,8 @@ while True:
     if len(fish) > 0:
         fish.sort() 
         x, y, move = fish[0][0], fish[0][1], fish[0][2]
+        # print(x, y, move)
+        # print(fish)
         total_days += move
         eat += 1
         sea[x][y] = 0 # 잡아먹힘
