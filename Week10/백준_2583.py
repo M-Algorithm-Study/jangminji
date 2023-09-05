@@ -1,58 +1,46 @@
-# import sys
-# sys.stdin  = open('input.txt', 'r')
-# dx = [-1, 1, 0, 0] 
-# dy = [0, 0, -1, 1]
-
-# M, N, K = map(int, input().split())
-
-# graph = [False] * N
-# for _ in range(M):
-
-
-
-# for _ in range(K):
-#     x1, y1, x2, y2 = map(int, input().split())
-
-# DFS
-
 import sys
-sys.setrecursionlimit(10**6) # 재귀의 깊이 변경 (RecursionError)
+sys.stdin  = open('input.txt', 'r')
 
-m, n, k = map(int, input().split())
-graph = [[0] * n for _ in range(m)]
-for _ in range(k):
-    x1, y1, x2, y2 = map(int, input().split())
-    for i in range(y1, y2):
-        for j in range(x1, x2):
-            graph[i][j] = 1
-            
-dx = [-1, 1, 0, 0]
+M, N, K = map(int, input().split())
+
+dx = [-1, 1, 0, 0] 
 dy = [0, 0, -1, 1]
-count = 0
 
-def dfs(x, y):
-    global count
-    if x<0 or x>=m or y<0 or y>=n:
-        return 0
-    if graph[x][y] == 1:
-        return 0
-    
-    graph[x][y] = 1
-    count += 1
-    for i in range(4):
-        dfs(x+dx[i], y+dy[i])
-    
-    return count
+graph = []
+for _ in range(M):
+    graph.append([0]*N)
 
+# 그래프 만들기
+for _ in range(K):
+    x1, y1, x2, y2 = map(int, input().split())
+    for i in range(x2-x1):
+        for j in range(y2-y1):
+            graph[y1+j][x1+i] = 1
+
+# 전체 탐색
+stack = []
 result = []
-for i in range(m):
-    for j in range(n):
-        cnt = dfs(i,j)
-        if cnt:
+for x in range(N):
+    for y in range(M):
+        # 그래프가 0이면
+        if graph[y][x] == 0:
+            cnt = 1
+            graph[y][x] = 3
+            stack.append((x,y))
+            # while문 시작
+            while stack:
+                a, b = stack.pop()
+                for n in range(4):
+                    nx = a + dx[n]
+                    ny = b + dy[n]
+                    if 0 <= nx < N and 0 <= ny < M and graph[ny][nx] == 0:
+                        stack.append((nx,ny))
+                       
+                        graph[ny][nx] = 3
+                        cnt += 1
             result.append(cnt)
-            count = 0
-            
 result.sort()
 print(len(result))
-for i in result:
-    print(i, end=' ')
+print(*result)
+            
+
