@@ -12,7 +12,7 @@ while True:
     # 만약 총 합이 S가 넘는다면, left를 하나씩 옮겨보면서 어디까지 길이가 줄어드나 확인
     if total >= S:
         min_length = min(min_length, right - left)
-        print(right,left)
+        # print(right,left)
         total -= numbers[left]
         left += 1
     elif right == N:
