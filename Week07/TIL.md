@@ -1,4 +1,4 @@
-# 2주차
+# 7주차
 ## 공통 문제
 > [백준 2468 안전 영역](https://www.acmicpc.net/problem/2468)<br>
 [백준 2667 단지번호붙이기](https://www.acmicpc.net/problem/2667)

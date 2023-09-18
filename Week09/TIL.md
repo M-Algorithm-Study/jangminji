@@ -1,4 +1,4 @@
-# 2주차
+# 9주차
 ## 공통 문제
 > [백준 16236 아기 상어](https://www.acmicpc.net/problem/16236)<br>
 [백준 13717 포켓몬 GO](https://www.acmicpc.net/problem/13717)

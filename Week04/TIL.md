@@ -1,4 +1,4 @@
-# 2주차
+# 4주차
 ## 공통 문제
 > [백준 20920 영단어 암기는 괴로워](https://www.acmicpc.net/problem/20920)<br>
 [백준 2579 계단 오르기](https://www.acmicpc.net/problem/2579)

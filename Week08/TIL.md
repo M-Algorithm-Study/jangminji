@@ -1,4 +1,4 @@
-# 2주차
+# 8주차
 ## 공통 문제
 > [백준 1697 숨바꼭질](https://www.acmicpc.net/problem/1697)<br>
 [백준 2638 치즈](https://www.acmicpc.net/problem/2638)

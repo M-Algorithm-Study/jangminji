@@ -1,4 +1,4 @@
-# 2주차
+# 5주차
 ## 공통 문제
 > [백준 15649 N과 M(1)](https://www.acmicpc.net/problem/15649)<br>
 [백준 1759 암호 만들기](https://www.acmicpc.net/problem/1759)
