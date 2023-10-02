@@ -40,11 +40,6 @@ if not isPossible:
 
 
 
-
-
-
-
-
 # # 시간 초과ㅠㅠ
 # from collections import deque
 

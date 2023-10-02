@@ -1,6 +1,7 @@
 import sys
 sys.stdin  = open('input.txt', 'r')
-
+# import time
+# start = time.time()
 # 사용자로부터 문자열 S와 T를 입력받음
 S = input()
 T = input()
@@ -21,12 +22,21 @@ if S == T:
 else:
     print(0)  # 바꿀 수 없다면 0 출력
 
-
+# print("time :", time.time() - start)
 
 
 
 
 # 시간초과와 메모리 초과로 gg...
+# start = time.time()
+# from collections import deque
+
+# S = input()
+# T = input()
+# T_len = len(T)
+# str_d = deque([S])
+# result = 0
+
 # while str_d:
 #     n_t = str_d.popleft()
 #     if n_t == T:
@@ -40,5 +50,32 @@ else:
 #     nn_t = n_t + "A"
 #     str_d.append(nn_t)
 # print(result)
+# print("time :", time.time() - start)
 
+# # 시간을 줄이기 위한 시도... 부질 없었다...(하지만 알아보는 과정에서 배운게 많다.)
+# from collections import deque
 
+# S = input()
+# T = input()
+# T_len = len(T)
+# str_d = deque([S])
+# result = 0
+
+# while str_d:
+#     n_t = str_d.popleft()
+#     if n_t == T:
+#         result = 1
+#         break
+#     if len(n_t) > T_len:
+#         break
+#     elif len(n_t) > 1:
+#         char_list = list(n_t)
+#         char_list.reverse()  # 리스트를 제자리에서 뒤집음
+#         char_list.append("B")
+#         result_string = ''.join(char_list)
+#         str_d.append(result_string)
+#     char_list = list(n_t)
+#     char_list.append("A")
+#     result_string = ''.join(char_list)
+#     str_d.append(result_string)
+# print(result)
