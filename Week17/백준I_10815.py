@@ -1,11 +1,33 @@
-# import sys
-# sys.stdin  = open('input.txt', 'r')
+import sys
+sys.stdin  = open('input.txt', 'r')
 
-# N = int(input())
-# N_list = list(map(int, input().split()))
+N = int(input())
+card = sorted(list(map(int, input().split())))
 
-# M = int(input())
-# M_list = list(map(int, input().split()))
+M = int(input())
+checks = list(map(int, input().split()))
+
+for check in checks:
+    left, right = 0, N - 1
+    flag = False
+    while left <= right:
+        mid = (left + right) // 2
+        if card[mid] > check:
+            right = mid - 1
+
+        elif card[mid] < check:
+            left = mid + 1
+        
+        else:
+            flag = True
+            break
+    if flag:
+        print(1, end=" ")
+    else:
+        print(0, end=" ")
+
+
+
 
 
 # import sys
@@ -29,17 +51,3 @@
 #             break
 #     print(1 if exist else 0, end=' ')
 
-# # 시간초과
-# N = int(input())
-# N_list = list(map(int, input().split()))
-
-# M = int(input())
-# M_list = list(map(int, input().split()))
-
-# result = []
-# for m in M_list:
-#     if m in N_list:
-#         result.append(1)
-#     else:
-#         result.append(0)
-# print(*result)
