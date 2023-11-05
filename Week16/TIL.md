@@ -3,7 +3,6 @@
 > [백준 1463 1로 만들기](https://www.acmicpc.net/problem/1463)<br>
 [백준 2747 피보나치 수](https://www.acmicpc.net/problem/2747)
 
-> [백준 1931 전깃줄](https://www.acmicpc.net/problem/1931)
 
 
 ## **📖백준 1463 1로 만들기**

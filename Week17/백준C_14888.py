@@ -11,25 +11,25 @@ def dfs(depth, total, plus, minus, murti, div):
     global max_result, min_result
 
     if depth == N:
-        # print("인덱스가 N이 됨")
+        print("인덱스가 N이 됨")
         max_result = max(max_result, total)
         min_result = min(min_result, total)
         return
     
     if plus:
-        # print(numbers[depth], "+")
+        print(numbers[depth], "+")
         dfs(depth + 1, total + numbers[depth], plus - 1, minus, murti, div)
 
     if minus:
-        # print(numbers[depth], "-")
+        print(numbers[depth], "-")
         dfs(depth + 1, total - numbers[depth], plus, minus - 1, murti, div)
 
     if murti:
-        # print(numbers[depth], "*")
+        print(numbers[depth], "*")
         dfs(depth + 1, total * numbers[depth], plus, minus, murti - 1, div)
 
     if div:
-        # print(numbers[depth], "/")
+        print(numbers[depth], "/")
         dfs(depth + 1, int(total / numbers[depth]), plus, minus, murti, div - 1)
 
 
