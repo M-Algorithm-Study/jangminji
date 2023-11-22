@@ -3,15 +3,15 @@ sys.stdin  = open('input.txt', 'r')
 
 # 특정 원소가 속한 집합을 찾기
 # 부모 노드를 찾는 함수
-def find_parent(x):
+def find_parent(x): # 3
     # 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
-    if parent[x] != x: # 4 1
-        parent[x] = find_parent(parent[x]) # 4 
+    if parent[x] != x: 
+        parent[x] = find_parent(parent[x]) 
     return parent[x]
 
 # 두 원소가 속한 집합을 합치기
 # 두 부모 노드를 합치는 함수, 더 작은 값으로 부모를 갱신 시키기
-def union_parent(a, b):
+def union_parent(a, b): # 
     a = find_parent(a)
     b = find_parent(b)
     if a < b:
@@ -46,6 +46,7 @@ for edge in edges:
     # 사이클이 발생하지 않는 경우에만 집합에 포함
     if find_parent(a) != find_parent(b):
         union_parent(a, b)
+        print(parent)
         result += cost
 
 print(result)
